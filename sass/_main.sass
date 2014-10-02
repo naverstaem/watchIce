@@ -275,6 +275,9 @@ header
 
 
 .history
+  background: url(../img/history_bg.png) center center no-repeat
+  +background-size(cover)
+  height: 500px
   padding-top: 60px
   +box
   +clr
@@ -282,81 +285,74 @@ header
 
   .history_in
     @extend %in
+    position: relative
     width: 1000px
-    padding-top: 50px
+    padding-top: 40px
     +clr
+  h2
+    color: #32aa00
   .history__block
-    margin-top: -10px
     +clr
     .history__block--right
       float: right
-      width: 600px
+      width: 620px
       +clr
       p
         font-size: 18px
         margin-bottom: 28px
         color: #1e1e1e
-
-    .history__block--left
-      float: left
-      width: 340px
-      +clr
-      .history__link
+        font-family: 'conv_pfdintextcondpro-light'
+      .button--video
         position: relative
+        background: #ffffff
+        +border-radius(12px)
+        width: 280px
+        height: 70px
+        +pfl
+        font-size: 24px
+        color: #32aa00
         text-align: center
-        font-family: 'conv_segoeprintregular'
-        font-size: 14px
-        color: inherit
-        text-decoration: none
-        display: inline-block
-
-
+        padding-top: 14px
+        padding-left: 20px
+        text-decoration: underline
+        float: left
+        +box
+        margin-top: 0
         &:hover
-          text-decoration: underline
-          .history__img
-            &:before
-              background: rgba(#fff, 0)
-
-      .history__img
-        position: relative
-        display: block
-        width: 340px
-        height: 220px
-        margin-top: 5px
-        margin-bottom: 10px
-        +clr
-        img
-          display: block
-        &:before
-          position: absolute
-          width: 320px
-          height: 200px
-          border: solid 2px white
-          top: 8px
-          left: 8px
-          content: ""
-          background: rgba(#fff,.2)
-        &:after
+          text-decoration: none
+        i
           position: absolute
           content: ""
+          top: 14px
+          left: 20px
           +s(play)
-          top: 50%
-          left: 50%
-          +transform(translate(-50%, -50%))
+
+
+  .history__img
+    position: absolute
+    display: block
+    width: 462px
+    height: 500px
+    top: -98px
+    left: -140px
+    +clr
+    img
+      display: block
+
 
 .specs
   +clr
   +box
-  padding-top: 20px
+  padding-top: 60px
   h2
-    margin-bottom: 80px
+    margin-bottom: 40px
   .specs_in
     @extend %in
     +clr
   &__items
     float: left
-    width: 205px
-    margin-right: 110px
+    width: 290px
+    margin-right: 35px
 
   &__colors
     text-align: left
@@ -373,60 +369,68 @@ header
 
 
   &__item
-    margin-bottom: 35px
+    margin-bottom: 30px
+    &:last-child
+      margin-right: 0
     h3
       font-family: 'conv_pfdintextcondpro-light'
       font-size: 16px
       font-weight: normal
       color: #5a5a5a
     p
-      font-family: 'conv_pfdintextcondpro-regular'
+      font-family: 'conv_pfdintextcondpro-light'
       font-size: 18px
       color: #1e1e1e
-    .color--first
+    .color
       margin-top: 10px
       position: relative
       display: inline-block
       width: 30px
       height: 30px
+      margin-right: 2px
       +border-radius(50%)
       +background-clip(padding-box)
-      +background-image(linear-gradient(to bottom left, #d1b977 0%, #f9e5bd 30%, #d1b977 60.01%, #776331 90.31%, #d1b977 100%))
-    .color--second
-      +background-image(linear-gradient(to bottom left, #c7c7c7 0%, #fff 30%, #dbdbdb 60.01%, #818181 90.31%, #c7c7c7 100%))
-
+    .color--blue
+      background: #004581
+    .color--orange
+      background: #ff5900
+    .color--green
+      background: #9fdb13
+    .color--grey
+      background: #dbdbdb
+    .color--white
+      background: #ffffff
+      border: 2px solid #dbdbdb
+      box-sizing: border-box
   &__watch
     position: relative
-    float: right
-    margin-right: -10px
-    margin-top: 70px
+    float: left
     img
-      width: 240px
-      height: 415px
+      width: 320px
+      height: 480px
     .specs__text-degree
       position: absolute
-      top: -25px
-      left: -45px
+      top: 32px
+      left: -77px
       width: 160px
       height: 110px
       z-index: 100
       .text-degree
         position: relative
-        font-family: 'georgiaitalic'
-        font-size: 24px
-        line-height: 1em
-        padding-left: 35px
+        font-family: 'conv_pfdintextcondpro-light'
+        font-size: 18px
+        line-height: 1.4em
         display: inline-block
-        color: #000
+        color: #1e1e1e
         text-align: center
         span
-          font-family: 'georgiabold_italic'
-          font-size: 30px
+          font-family: 'conv_pfdintextcondpro-light'
+          font-size: 36px
         &:before
           position: absolute
           content: ""
-          top: 2px
-          left: -33px
+          top: -23px
+          left: -16px
           +s(360)
       p
         margin-top: 5px
@@ -437,20 +441,26 @@ header
         line-height: 1em
     .prev
       position: absolute
-      left: -48px
-      top: 185px
+      left: -40px
+      top: 225px
       content: ""
       cursor: pointer
       +s(prev)
     .next
       position: absolute
-      right: -48px
-      top: 185px
+      right: -40px
+      top: 225px
       content: ""
       cursor: pointer
       +s(next)
 
-
+.chance
+  background: url(../img/chance_bg.png) center center no-repeat
+  +background-size(cover)
+  height: 500px
+  .chance_in
+    @extend %in
+    width: 960px
 
 
 .our
