@@ -90,6 +90,11 @@ head.ready(function() {
 //    });
 //  });
 
+    $('.slick').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
+
 
     //yet another scrolling with hightlight effect (works for me)
 //each marker link would be with section class
