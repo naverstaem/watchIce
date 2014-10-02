@@ -206,7 +206,7 @@ header
   display: none
   height: 60px
   +box
-  background: rgba(#be3278, 0.8)
+  background: rgba(100,210,196, 0.8)
   .top
     height: 0
 
@@ -447,7 +447,7 @@ header
       left: 0
       right: 0
       bottom: 0
-      background: rgba(#000, .2)
+      background: rgba(#000, .5)
       +opacity(0)
       +transition(background, .5s)
       z-index: 1
@@ -458,22 +458,42 @@ header
         top: 50%
         left: 50%
         +transform(translate(-50%, -50%))
-      &:before
-        position: absolute
-        content: ""
-        width: 320px
-        height: 200px
-        top: -14px
-        left: -14px
-        border: 1px solid #e5e5e5
-
       &:hover
         +opacity(1)
 
-
-
     img
       display: block
+
+.slick-prev, .slick-next
+  position: absolute
+  content: ''
+  top: 14px
+  left: 0
+  width: 330px
+  height: 200px
+  +transition(background, .5s)
+  &:hover
+    +background-image(linear-gradient(to right, rgba(#fff,1), rgba(#fff,0)))
+  &:before
+    position: absolute
+    content: ""
+    top: 38%
+    left: 0
+    +s(prev_ico)
+.slick-next
+  right: 0
+  left: auto
+  &:hover
+
+    +background-image(linear-gradient(to right, rgba(#fff,0), rgba(#fff, 1)))
+  &:before
+    position: absolute
+    content: ""
+    top: 38%
+    right: 0
+    left: auto
+    +s(next_ico)
+
 
 .reviews
   +clr
@@ -517,16 +537,7 @@ header
       +pfl
       color: #1e1e1e
       font-size: 16px
-.slick-prev, .slick-next
-  position: absolute
-  content: ""
-  top: 45%
-  left: 0
-  +s(prev_ico)
-.slick-next
-  +s(next_ico)
-  right: 0
-  left: auto
+
 
 .our
   background: url(../img/our_bg.jpg) center no-repeat
